@@ -1,16 +1,24 @@
-export default async function MapMatrix() {
+"use client"
+
+import { createContext } from "react";
+
+export const MapRadarContext = createContext(Array,);
+console.log(MapRadarContext);
+
+export default function MapMatrix() {
     ///Game Data Block
-    let header = ["","1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-    let row1 = ["A","E", "H", "E", "E", "E", "E", "E", "E", "E", "E"];
-    let row2 = ["B","E", "E", "E", "E", "E", "E", "E", "E", "E", "E"];
-    let row3 = ["C","E", "E", "E", "E", "E", "E", "E", "E", "E", "E"];
-    let row4 = ["D","E", "E", "E", "M", "E", "E", "E", "E", "E", "E"];
-    let row5 = ["E","E", "E", "E", "E", "E", "E", "E", "E", "E", "E"];
-    let row6 = ["F","E", "E", "E", "E", "E", "E", "E", "E", "E", "E"];
-    let row7 = ["G","E", "E", "E", "E", "E", "E", "E", "E", "E", "E"];
-    let row8 = ["H","E", "E", "E", "E", "E", "E", "E", "E", "E", "E"];
-    let row9 = ["I","E", "E", "E", "E", "E", "E", "E", "E", "E", "E"];
-    let row10 = ["J","E", "E", "E", "E", "E", "E", "E", "E", "E", "E"];
+
+    let header = ["", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+    let radarRow1 = ["A", "", "", "", "", "", "", "", "", "", ""];
+    let radarRow2 = ["B", "", "", "", "", "", "", "", "", "", ""];
+    let radarRow3 = ["C", "", "", "", "", "", "", "", "", "", ""];
+    let radarRow4 = ["D", "", "", "", "", "", "", "", "", "", ""];
+    let radarRow5 = ["E", "", "", "", "", "", "", "", "", "", ""];
+    let radarRow6 = ["F", "", "", "", "", "", "", "", "", "", ""];
+    let radarRow7 = ["G", "", "", "", "", "", "", "", "", "", ""];
+    let radarRow8 = ["H", "", "", "", "", "", "", "", "", "", ""];
+    let radarRow9 = ["I", "", "", "", "", "", "", "", "", "", ""];
+    let radarRow10 = ["J", "", "", "", "", "", "", "", "", "", ""];
 
     //styling
     let radarBox = {
@@ -18,16 +26,22 @@ export default async function MapMatrix() {
         border: "solid black 2px",
         width: "30px",
         // textAlign: "center",
+        display: "flex",
+        justifyContent: "center",
     }
 
     return (
-        <div>
+        <div style={{
+            // display: "flex",
+            // justifyContent: "center",
+            alignItems: "center",
+        }}>
             This is the map matrix.
             <div style={{
                 display: "flex"
-            }}>{header.map((function (data) {
+            }}>{header.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"header-" + index} id={"header-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
@@ -35,9 +49,9 @@ export default async function MapMatrix() {
 
             <div style={{
                 display: "flex"
-            }}>{row1.map((function (data) {
+            }}>{radarRow1.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"a-" + index} id={"a-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
@@ -45,9 +59,9 @@ export default async function MapMatrix() {
 
             <div style={{
                 display: "flex"
-            }}>{row2.map((function (data) {
+            }}>{radarRow2.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"b-" + index} id={"b-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
@@ -55,9 +69,9 @@ export default async function MapMatrix() {
 
             <div style={{
                 display: "flex"
-            }}>{row3.map((function (data) {
+            }}>{radarRow3.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"c-" + index} id={"c-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
@@ -65,9 +79,9 @@ export default async function MapMatrix() {
 
             <div style={{
                 display: "flex"
-            }}>{row4.map((function (data) {
+            }}>{radarRow4.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"d-" + index} id={"d-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
@@ -75,9 +89,9 @@ export default async function MapMatrix() {
 
             <div style={{
                 display: "flex"
-            }}>{row5.map((function (data) {
+            }}>{radarRow5.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"e-" + index} id={"e-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
@@ -85,9 +99,9 @@ export default async function MapMatrix() {
 
             <div style={{
                 display: "flex"
-            }}>{row6.map((function (data) {
+            }}>{radarRow6.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"f-" + index} id={"f-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
@@ -95,9 +109,9 @@ export default async function MapMatrix() {
 
             <div style={{
                 display: "flex"
-            }}>{row7.map((function (data) {
+            }}>{radarRow7.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"g-" + index} id={"g-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
@@ -105,9 +119,9 @@ export default async function MapMatrix() {
 
             <div style={{
                 display: "flex"
-            }}>{row8.map((function (data) {
+            }}>{radarRow8.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"h-" + index} id={"h-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
@@ -115,9 +129,9 @@ export default async function MapMatrix() {
 
             <div style={{
                 display: "flex"
-            }}>{row9.map((function (data) {
+            }}>{radarRow9.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"i-" + index} id={"i-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
@@ -125,9 +139,9 @@ export default async function MapMatrix() {
 
             <div style={{
                 display: "flex"
-            }}>{row10.map((function (data) {
+            }}>{radarRow10.map((function (data, index) {
                 return (
-                    <div style={radarBox
+                    <div key={"j-" + index}  id={"j-" + index} style={radarBox
                     }>{data}</div>
                 )
             }
