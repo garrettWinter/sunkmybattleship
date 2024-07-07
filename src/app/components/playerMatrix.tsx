@@ -1,18 +1,12 @@
+"use client"
+
+import { useContext } from 'react';
+import { Player1MapContext } from '../contexts/gameContext';
+
 export default async function PlayerMatrix() {
     ///Game Data Block
-    let playerMap = {
-        '': [" ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
-        a: ["A", "", "B", "B", "B", "B", "", "", "", "", ""],
-        b: ["B", "", "", "", "", "", "", "", "A", "", ""],
-        c: ["C", "", "", "", "", "", "", "", "A", "", ""],
-        d: ["D", "", "D", "D", "D", "", "", "", "A", "", ""],
-        e: ["E", "", "", "", "", "", "", "", "A", "", ""],
-        f: ["F", "", "", "S", "S", "S", "", "", "A", "", ""],
-        g: ["G", "", "", "", "", "", "", "", "", "", ""],
-        h: ["H", "", "", "", "", "", "T", "", "", "", ""],
-        i: ["I", "", "", "", "", "", "T", "", "", "", ""],
-        j: ["J", "", "", "", "", "", "", "", "", "", ""],
-    };
+
+const playerMap = useContext(Player1MapContext)
 
     //styling
     let player1Box = {
