@@ -3,7 +3,7 @@
 import { useContext } from 'react';
 import { Player1MapContext } from '../contexts/gameContext';
 
-export default async function PlayerMatrix() {
+export default function PlayerMatrix() {
     ///Game Data Block
 
 const playerMap = useContext(Player1MapContext)
