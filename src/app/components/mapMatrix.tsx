@@ -36,7 +36,7 @@ export default function MapMatrix() {
             // justifyContent: "center",
             alignItems: "center",
         }}>
-            This is the map matrix.
+            This is the player 1s radar map.
             <div style={{
                 display: "flex"
             }}>{header.map((function (data, index) {
