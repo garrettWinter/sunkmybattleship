@@ -9,7 +9,11 @@ export default function Home() {
     <body>
       <Header />
       <main>
-        <div>
+        <div style = {{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}>
           <div style={{ textAlign: "center" }}>This is the main play area</div>
           <MapMatrix />
           <AttackWindow />

@@ -10,6 +10,7 @@ export default function AttackWindow() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        background: 'darkGrey'
     };
 
     let buttonStyles: CSSProperties = {
@@ -19,7 +20,9 @@ export default function AttackWindow() {
 
     function attackActionButton() {
         console.log("Attack Button Clicked");
-        window.alert(`You Attacked ${inputValue}`)
+        
+        window.alert(`You Attacked ${inputValue}`);
+
     };
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
