@@ -5,8 +5,7 @@ import { Player1MapContext } from '../contexts/gameContext';
 
 export default function PlayerMatrix() {
     ///Game Data Block
-
-const playerMap = useContext(Player1MapContext)
+    const playerMap = useContext(Player1MapContext);
 
     //styling
     let player1Box = {
@@ -15,7 +14,7 @@ const playerMap = useContext(Player1MapContext)
         width: "30px",
         display: "flex",
         justifyContent: "center",
-    }
+    };
     return (
         <div>
             <div style={{ textAlign: "center" }}>This is the Players Map</div>

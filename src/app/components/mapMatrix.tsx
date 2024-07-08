@@ -1,13 +1,12 @@
 "use client"
 
-import { createContext } from "react";
-
-export const MapRadarContext = createContext(Array,);
-console.log(MapRadarContext);
+import { useContext } from 'react';
+import { Player1RadarContext } from '../contexts/gameContext';
 
 export default function MapMatrix() {
     ///Game Data Block
-    let radarMap = {
+    const radarMap = useContext(Player1RadarContext);
+    let backup = {
         '': [" ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
         a: ["A", "", "", "", "", "", "", "", "", "", ""],
         b: ["B", "", "", "", "", "", "", "", "", "", ""],
