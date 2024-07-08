@@ -33,7 +33,6 @@ export default function MapMatrix() {
     return (
         <div style={{ display: "flex", flexDirection: "column" }}>
             {Object.values(radarMap).map((function (rowData, rowIndex) {
-                console.log(rowData);
                 return (
                     <div
                         key={rowIndex}
